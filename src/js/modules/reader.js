@@ -10,7 +10,6 @@ export default function read() {
           bufferView[i] = input.charCodeAt(i);
 		  }
 		  resolve(buffer);
-		  console.log(buffer)
       })(data);
 	  }, 1000);
   });

@@ -7,18 +7,26 @@ export default class GameSavingLoader {
 		return new Promise((resolve) => {
 			resolve(read())
 		})
-			.then(data => {
-				return new Promise(resolve => {
-					resolve(json(data))
-				})
+		.then(data => {
+			return new Promise(resolve => {
+				resolve(json(data))
 			})
-			.then(jsonData => {
-				console.log(JSON.parse(jsonData))
-				return JSON.parse(jsonData)
-			})
+		})
+		.then(jsonData => {
+			return JSON.parse(jsonData)
+		})
 	}
 }
 
-class GameSaving extends GameSavingLoader {
-	
-}
+
+console.log(GameSavingLoader.load()
+.then(saving => {
+		return new Promise ((resolve, reject) => {
+			resolve(saving)
+			reject(error)
+		})
+	}
+)
+.catch(error => {
+	console.error(error)
+}))
