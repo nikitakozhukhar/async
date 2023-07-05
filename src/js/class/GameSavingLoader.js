@@ -18,8 +18,7 @@ export default class GameSavingLoader {
 	}
 }
 
-
-console.log(GameSavingLoader.load()
+GameSavingLoader.load()
 .then(saving => {
 		return new Promise ((resolve, reject) => {
 			resolve(saving)
@@ -29,4 +28,4 @@ console.log(GameSavingLoader.load()
 )
 .catch(error => {
 	console.error(error)
-}))
+})
